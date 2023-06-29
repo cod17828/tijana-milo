@@ -21,7 +21,7 @@ const LIBS = '/libs';
 // Add any config options.
 const CONFIG = {
   // codeRoot: '',
-  // contentRoot: '',
+  contentRoot: '',
   // imsClientId: 'college',
   // geoRouting: 'off',
   // fallbackRouting: 'off',
