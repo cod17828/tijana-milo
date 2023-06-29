@@ -14,8 +14,8 @@ export default async function init(el) {
 
   submit.addEventListener('click', async function formSubmit(ev) {
     ev.preventDefault();
-    const { codeRoot } = getConfig();
-    const send = await fetch(`${codeRoot}/preferences`, {
+    const { contentRoot } = getConfig();
+    const send = await fetch(`${contentRoot}/preferences`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -29,6 +29,7 @@ export default async function init(el) {
     if ([200, 201].includes(send.status)) {
         el.removeChild(form);
         el.append(createTag('span', {}, 'Thank you'));
+        await fetch('https://admin.hlx.page/preview/cod17828/tijana-milo/main/preference.json');
     }
   });
 }
